@@ -1,0 +1,35 @@
+{
+  "theme_color": "#f69435",
+  "background_color": "#f69435",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": ".",
+  "start_url": ".",
+  "id": ".",
+  "short_name": "twentyone - Admin",
+  "name": "twentyone - eCommerce Admin Dashboard",
+  "description": "twentyone Fashion  e-commerce Admin Dashboard",
+  "icons": [
+    {
+      "src": "/twentyone.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/twentyone.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/twentyone.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/twentyone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

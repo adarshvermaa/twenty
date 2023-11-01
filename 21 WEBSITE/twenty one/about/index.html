@@ -1,0 +1,982 @@
+<html>
+
+<!-- Mirrored from nogreyarea.co/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2022 13:23:24 GMT -->
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0,user-scalable=0">
+    <title>TwentyOne - About</title>
+    <link href="../assets/css/mainbe42.css?v94" type="text/css" rel="stylesheet">
+    <style>
+        .display-search-item {
+          width: 100%;
+          height: 60%;
+          margin-top: 30px;
+          background-color: transparent;
+          overflow-y: scroll;
+        }
+        .display-search-item a{
+          text-decoration: none;
+          color: #000000;
+        }
+    
+        .display-search-item::-webkit-scrollbar {
+          width: 2px;
+        }
+    
+        .display-search-item::-webkit-scrollbar-thumb {
+          background-color: black;
+        }
+    
+        .item {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 20px;
+          width: 50%;
+          margin-bottom: 25px;
+          cursor: pointer;
+        }
+        .item a{
+          display: flex;
+          width: 100%;
+          gap: 20px;
+        }
+        .item img{
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          object-position: center;
+        }
+    
+        .item-details {
+          width: 100%;
+          display: flex;
+          font-size: 14px;
+          font-weight: 600;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+    
+        .item-details .product-details .desc {
+          font-size: 12px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.8);
+          margin-top: 4px;
+        }
+
+        /* Drop Down */
+.collection-div {
+  display: flex !important;
+  flex-direction: column;
+  position: relative;
+  height: 60px;
+  text-align: center;
+}
+.dropdown {
+  width: 100%;
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  opacity: 0;
+  transition: 0.2s all ease;
+  z-index: 99999;
+}
+.mouseover {
+  opacity: 1;
+}
+
+.dropdown li a{
+  text-align: center;
+
+}
+.dropdown li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.mobile-collection{
+    width: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 0px;
+    display: none;
+    transition: 0.3s all ease;
+  }
+  .collection-active{
+    display: flex;
+    max-height: 100%;
+  }
+
+
+      </style>
+</head>
+
+
+
+
+
+<body id="about">
+
+    <div class="nav container">
+        <div class="left">
+            <a href="../index.html"><img src="../assets/img/logo-black.svg"></a>
+        </div>
+        <div class="right">
+            <div><a class="search-btn search-box Click-here" id="search-btn">SEARCH</a></div>
+            <div><a href="./index.html">About</a></div>
+            <div class="collection-div" onmouseenter="showDropDown()" onmouseleave="hideDropDown()"><a>Collections</a>
+              <div class="dropdown" id="dropdown">
+                <!-- <li><a href="./trend.html">Category 1</a></li>
+                <li><a href="./trend.html">Category 2</a></li>
+                <li><a href="./trend.html">Category 3</a></li> -->
+              </div>
+            </div>
+            <div id="login"><a href="./login.html" id="login-web" name="login-web">Log in</a></div>
+
+            <div><a id="cart-btn" style="cursor: pointer;">Cart</a></div>
+        </div>
+    </div>
+    <div class="custom-model-main" id="custom-model-main">
+        <div class="custom-model-inner">
+            <div class="close-btn">×</div>
+            <div class="custom-model-wrap">
+                <div class="pop-up-content-wrap">
+                    <header class="header">
+                        <div class="header-left">
+                            <button class="menu-btn" aria-label="Open menu">
+                                <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 384 512">
+                                    <style>
+                                        svg {
+                                            fill: #000000;
+                                        }
+                                    </style>
+                                    <path
+                                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                </svg>
+                            </button>
+
+                            <div class="logo">
+                                <a>
+                                    <img src="../assets/img/logo-black.svg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <span class="top-menus">
+                                <a class="menu" id="login-header-right" name="login-header-right">LOG IN</a>
+                                <a class="menu">HELP </a>
+                                <a class="menu">
+                                    <span class="cart">
+                                        <svg class="layout-header-links__cart-icon" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9 5.001V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.001h5v7h-1v-6H5v13.9h10v1H4V5h5zM10 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.001h-4V4z">
+                                            </path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M22.8 23.4v-9h-5.4v9l2.695-2.827L22.8 23.4zm-4.6-1.998l1.894-1.987L22 21.407V15.2h-3.8v6.202z">
+                                            </path>
+                                        </svg>
+                                        <span class="items-count">0</span>
+                                    </span></a>
+                            </span>
+                        </div>
+                    </header>
+
+                    <form class="formtop_space">
+                        <div class="search_form">
+                          <input type="text" name="search" placeholder="Search Products" class="search_field" id="search-field" />
+            
+                          <div class="display-search-item" id="display-search-item">
+                            <!-- <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="https://placehold.co/50x70.png" alt="">
+                              <div class="item-details">
+                                <div class="product-details">
+                                  <p>Product Title</p>
+                                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, blanditiis.
+                                  </p>
+                                </div>
+                                <p>&#8377;2,000</p>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a class="menu__icon mobile"><span></span></a>
+    <ul class="menu mobile">
+        <li><a href="../index.html" class="menu__item"><img src="../assets/img/logo-black.png"></a></li>
+        <div>
+            <li><a class="search-btn search-box Click-here" id="search-btn">SEARCH</a></li>
+
+            <li><a href="index.html" class="menu__item">About</a></li>
+            <li>
+              <a class="menu__item" id="mobile-collection-btn">Collections</a>
+            </li>
+            <li class="mobile-collection" id="mobile-collection">
+              <a href="./product2.html"><span>Link</span></a>
+              <a href="./product2.html"><span>Link</span></a>
+              <a href="./product2.html"><span>Link</span></a>
+              <a href="./product2.html"><span>Link</span></a>
+              <a href="./product2.html"><span>Link</span></a>
+            </li>
+            <li><a href="./login.html" class="menu__item" id="login-mobile" name="login-mobile">Log in</a></li>
+            <li><a href="../contact/index.html" class="menu__item">Contact</a></li>
+        </div>
+        <li><a href="#" class="menu__item moon-menu"> <img src="../assets/img/moon-face-black.png"></a></li>
+    </ul>
+
+
+
+
+    <div class="wrap">
+        <h2>NGA <small>- with all the navigation options enabled</small></h2>
+
+        <div class="scrollbar">
+            <div class="handle">
+                <div class="mousearea"></div>
+            </div>
+        </div>
+
+        <div class="frame" id="basic">
+            <ul class="clearfix">
+                <li><img src="ABOUT_01.jpg"></li>
+
+                <li>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, eum? <span>Lorem ipsum dolor sit.</span>, Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit.
+                        <br><br>Lorem ipsum dolor sit amet. <span>Lorem, ipsum.</span> PERCEIVED IT <span>AS AN
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ullam ea vero!</span>
+                    </p>
+                </li>
+
+                <li><img src="ABOUT_03.jpg"></li>
+                <li><img src="ABOUT_02.jpg"></li>
+                <li>
+                    <p>INTRIGUED BY THE EVER-EVOLVING IDEA OF CONTEMPORARY CASUAL WEAR AND ITS TRADITIONAL
+                        MANIFESTATIONS IN INDIAN CULTURE, THE LABEL ENCOMPASSES <span>HERITAGE AND MODERNITY</span> IN
+                        ITS COLLECTIONS.</p>
+                </li>
+                <li><img src="ABOUT_04.gif"></li>
+                <li><img src="ABOUT_05.jpg"></li>
+                <li>
+                    <p>FOR CENTURIES, INDIAN DRESSING HAS BEEN INTERPRETED BUT NOT EMBRACED, SEEN BUT NOT APPRECIATED TO
+                        ITS FULLEST POTENTIAL. <span>FINDING INSPIRATION IN PEOPLE, ART, CULTURE AND MOST OF ALL</span>,
+                        THE EVERYDAY. INTERPRETATION OF ALL THREE, DRIVES THE CONSTANT EVOLUTION OF THE LABEL AS A WAY
+                        OF UNDERSTANDING ITS WEARER.
+                    </p>
+                </li>
+                <li><img src="ABOUT_06.gif"></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <div class="horizontal-scroll-wrap">
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+                <div class="slide-wrap"></div>
+            </div> -->
+
+    <!-- <main>
+                <section>
+                  <h1>Beep</h1>
+                </section>
+                <section>
+                  <h1>Boop</h1>
+                </section>
+                <section>
+                  <h1>Boooom</h1>
+                </section>
+                  <section>
+                  <h1>The End</h1>
+                </section>
+              </main> -->
+
+    <!-- <div id="collections-visible" class="collection-one">
+
+                <iframe src="../collections/index.html" title="Collection 1">
+                
+                </iframe>
+
+                <div class="close-button collection-show" onclick="myFunction()">CLOSE</div>
+                
+              </div> -->
+
+
+
+
+
+
+    <div class="footer container">
+        <div>
+            <a href="https://www.instagram.com/nogreyarea_official/" target="_blank">Instagram</a>
+        </div>
+
+        <div>
+            <a href="../terms/index.html">Terms & Conditions</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+
+        <div>
+            <img src="../assets/img/moon-face.png" class="moon-face-footer">
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+                const scrollContainer = document.querySelector("main");
+
+                scrollContainer.addEventListener("wheel", (evt) => {
+                    evt.preventDefault();
+                    scrollContainer.scrollLeft += evt.deltaY;
+                });
+            </script> -->
+
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        if (window.screen.width > 780) {
+            document.write(
+                '<script src="../assets/js/nga-plugins.js"><\/script>' +
+                ' <script src="../assets/js/nga-sly.min.js"><\/script>'
+            )
+        }
+    </script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('.menu__icon').click(function () {
+                $('body').toggleClass('menu_shown');
+            });
+        });
+
+    </script>
+
+
+
+
+
+    <!-- <script>
+
+                function myFunction() {
+                var element = document.getElementById("collections-visible");
+                element.classList.toggle("collection-show");
+                }
+
+            </script>
+
+            <script>
+
+                function myFunctionTwo() {
+                var element = document.getElementById("collections-visible");
+                element.classList.toggle("collection-show");
+                }
+
+            </script> -->
+
+
+    <script>
+        jQuery(function ($) {
+            'use strict';
+
+            // -------------------------------------------------------------
+            //   Basic Navigation
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#basic');
+                var $slidee = $frame.children('ul').eq(0);
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'basic',
+                    smart: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 0,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    pagesBar: $wrap.find('.pages'),
+                    activatePageOn: 'click',
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Buttons
+                    forward: $wrap.find('.forward'),
+                    backward: $wrap.find('.backward'),
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next'),
+                    prevPage: $wrap.find('.prevPage'),
+                    nextPage: $wrap.find('.nextPage')
+                });
+
+                // To Start button
+                $wrap.find('.toStart').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the start of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toStart', item);
+                });
+
+                // To Center button
+                $wrap.find('.toCenter').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the center of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toCenter', item);
+                });
+
+                // To End button
+                $wrap.find('.toEnd').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the end of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toEnd', item);
+                });
+
+                // Add item
+                $wrap.find('.add').on('click', function () {
+                    $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+                });
+
+                // Remove item
+                $wrap.find('.remove').on('click', function () {
+                    $frame.sly('remove', -1);
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   Centered Navigation
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#centered');
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'centered',
+                    smart: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 4,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Buttons
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next')
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   Force Centered Navigation
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#forcecentered');
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'forceCentered',
+                    smart: 1,
+                    activateMiddle: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 0,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Buttons
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next')
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   Cycle By Items
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#cycleitems');
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'basic',
+                    smart: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 0,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Cycling
+                    cycleBy: 'items',
+                    cycleInterval: 1000,
+                    pauseOnHover: 1,
+
+                    // Buttons
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next')
+                });
+
+                // Pause button
+                $wrap.find('.pause').on('click', function () {
+                    $frame.sly('pause');
+                });
+
+                // Resume button
+                $wrap.find('.resume').on('click', function () {
+                    $frame.sly('resume');
+                });
+
+                // Toggle button
+                $wrap.find('.toggle').on('click', function () {
+                    $frame.sly('toggle');
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   Cycle By Pages
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#cyclepages');
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'basic',
+                    smart: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 0,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    pagesBar: $wrap.find('.pages'),
+                    activatePageOn: 'click',
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Cycling
+                    cycleBy: 'pages',
+                    cycleInterval: 1000,
+                    pauseOnHover: 1,
+                    startPaused: 1,
+
+                    // Buttons
+                    prevPage: $wrap.find('.prevPage'),
+                    nextPage: $wrap.find('.nextPage')
+                });
+
+                // Pause button
+                $wrap.find('.pause').on('click', function () {
+                    $frame.sly('pause');
+                });
+
+                // Resume button
+                $wrap.find('.resume').on('click', function () {
+                    $frame.sly('resume');
+                });
+
+                // Toggle button
+                $wrap.find('.toggle').on('click', function () {
+                    $frame.sly('toggle');
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   One Item Per Frame
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#oneperframe');
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'forceCentered',
+                    smart: 1,
+                    activateMiddle: 1,
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 0,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Buttons
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next')
+                });
+            }());
+
+            // -------------------------------------------------------------
+            //   Crazy
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('#crazy');
+                var $slidee = $frame.children('ul').eq(0);
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'basic',
+                    smart: 1,
+                    activateOn: 'click',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 3,
+                    scrollBar: $wrap.find('.scrollbar'),
+                    scrollBy: 1,
+                    pagesBar: $wrap.find('.pages'),
+                    activatePageOn: 'click',
+                    speed: 300,
+                    elasticBounds: 1,
+                    easing: 'easeOutExpo',
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1,
+
+                    // Buttons
+                    forward: $wrap.find('.forward'),
+                    backward: $wrap.find('.backward'),
+                    prev: $wrap.find('.prev'),
+                    next: $wrap.find('.next'),
+                    prevPage: $wrap.find('.prevPage'),
+                    nextPage: $wrap.find('.nextPage')
+                });
+
+                // To Start button
+                $wrap.find('.toStart').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the start of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toStart', item);
+                });
+
+                // To Center button
+                $wrap.find('.toCenter').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the center of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toCenter', item);
+                });
+
+                // To End button
+                $wrap.find('.toEnd').on('click', function () {
+                    var item = $(this).data('item');
+                    // Animate a particular item to the end of the frame.
+                    // If no item is provided, the whole content will be animated.
+                    $frame.sly('toEnd', item);
+                });
+
+                // Add item
+                $wrap.find('.add').on('click', function () {
+                    $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+                });
+
+                // Remove item
+                $wrap.find('.remove').on('click', function () {
+                    $frame.sly('remove', -1);
+                });
+            }());
+        });
+    </script>
+
+    <!-- <script>
+        document.getElementById('menu_icon').addEventListener('click', () => {
+            let body = document.getElementById('home');
+            body.classList.toggle('menu_shown');
+        });
+    </script> -->
+
+    <script>
+        $(".Click-here").on('click', function () {
+            $(".custom-model-main").addClass('model-open');
+        });
+        $(".close-btn, .bg-overlay").click(function () {
+            $(".custom-model-main").removeClass('model-open');
+        });
+
+        document.getElementById('close-btn').addEventListener('click', () => {
+            $(".custom-model-main").removeClass('model-open');
+        })
+
+
+    </script>
+    <script>
+        const loginWeb = document.getElementById("login-web")
+        const loginHeaderRight = document.getElementById("login-header-right")
+        const loginMobile = document.getElementById("login-mobile")
+        const user = JSON.parse(localStorage.getItem("user"))
+        if (user) {
+            loginWeb.innerHTML = user.name;
+            loginWeb.href = "./profile.html"
+            loginHeaderRight.innerHTML = user.name;
+            loginHeaderRight.href = "./profile.html"
+            loginMobile.innerHTML = user.name;
+            loginMobile.href = "./profile.html"
+        }
+      </script>
+      <script>
+        document.getElementById("search-field").addEventListener("input", async (e) => {
+         const searchValue = e.target.value;
+
+  if (searchValue.trim() === "") {
+    document.getElementById("display-search-item").innerHTML = "";
+    return;
+  }
+
+  try {
+    const response = await fetch(`http://3.225.218.18:5086:5086/api/products/search/${searchValue}`);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    console.log(data);
+    const showData = document.getElementById("display-search-item");
+    showData.innerHTML = ""; 
+
+    if (data.Data.length > 0) {
+      data.Data.forEach((newData) => {
+        const itemHtml = `
+          <div class="item">
+          <a href=../product2.html?id=${newData._id}> 
+            <img src=http://3.225.218.18:5086:5086/api/static/${newData.image} alt="">
+            <div class="item-details">
+              <div class="product-details">
+                <p>${newData.title.en}</p>
+                <p class="desc">${newData.description.en.slice(0,60)}</p>
+              </div>
+              <p>&#8377;${newData.prices.price}</p>
+            </div>
+            </a>
+          </div>`;
+
+        showData.insertAdjacentHTML("beforeend", itemHtml);
+      });
+      
+    } else {
+      showData.innerHTML = "No results found.";
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+      </script>
+      <!-- Collection DropDown -->
+  <script>
+    const dropdown = document.getElementById('dropdown');
+    function showDropDown() {
+      dropdown.classList.add('mouseover');
+    }
+    function hideDropDown() {
+      dropdown.classList.remove('mouseover');
+    }
+    fetch("http://localhost:5055/api/category/all")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.length > 0) {
+          console.log(data);
+          // data.map(data => {
+          //   dropdown.innerHTML = `
+          //             <li><a href=./trend.html?id=${data._id}>${data.name.en}</a></li>
+          //             `
+          // })
+          data.forEach((data) => {
+            const listItem = `
+            <li><a href=../trend.html?id=${data._id}>${data.name.en}</a></li>
+            `
+            dropdown.insertAdjacentHTML("beforeend", listItem)
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  </script>
+
+<script>
+  const collectionBtn = document.getElementById('mobile-collection-btn');
+  const mobileCollection = document.getElementById('mobile-collection')
+  collectionBtn.addEventListener('click', () => {
+    mobileCollection.classList.toggle('collection-active');
+
+  })
+
+  fetch("http://localhost:5055/api/category/all")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.length > 0) {
+
+        data.forEach((data) => {
+
+          const listItem = `
+          <a href=../trend.html?id=${data._id}><span>${data.name.en}</span></a>
+          `
+          mobileCollection.insertAdjacentHTML("beforeend", listItem)
+        });
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+</script>
+  
+      
+</body>
+
+
+
+
+
+
+<!-- Mirrored from nogreyarea.co/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2022 13:23:32 GMT -->
+
+</html>
